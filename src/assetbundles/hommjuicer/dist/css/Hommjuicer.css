@@ -1,0 +1,250 @@
+/**
+	* hommjuicer plugin for Craft CMS
+	*
+	* hommjuicer CSS
+	*
+	* @author    Domenik Hofer
+	* @copyright Copyright (c) 2018 Domenik Hofer
+	* @link      homm.ch
+	* @package   Hommjuicer
+	* @since     0.0.1
+*/
+
+#settings-juicerURL-label{
+	color:red;
+}
+
+#juicer{
+	padding-bottom:100px;	
+}
+.gutter-sizer{
+	width:50px;
+}
+.grid-sizer,
+.grid-item{ 
+	width: calc((100% - 100px) / 3);
+}
+.grid-item{
+	display:block;
+	overflow:hidden;
+	margin-bottom:50px;
+	color:#000;
+	background:#fff;
+	background:linear-gradient(315deg, transparent 10px, #fff 0) bottom right;
+}
+.grid-item a{
+	color:#000;
+}
+
+.grid-item.color2{
+	background:#004388;	
+	background:linear-gradient(315deg, transparent 10px, #004388 0) bottom right;
+	color:#fff;
+}
+.grid-item.color2 a{
+	color:#fff;
+}
+.grid-item.color3{
+	background:#c10a25;	
+	background:linear-gradient(315deg, transparent 10px, #c10a25 0) bottom right;
+	color:#fff;
+}
+.grid-item.color3 a{
+	color:#fff;
+}
+.grid-item img{
+	width:100%;
+}
+.grid-item .gridContent{
+	padding:20px;
+}
+.grid-item .gridContent span{
+	display:block;
+}
+.grid-item .gridContent em{
+	display:block;
+	font-weight:bold;
+	font-style:normal;
+	font-size: smaller;
+	height: 25px;
+	padding-top: 20px;
+}
+.grid-item .gridContent em i.fa{
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	font-size: 25px;
+}
+
+@media screen and (max-width: 1023px){
+	#juicer{
+		padding-bottom:80px;	
+	}
+	.gutter-sizer{
+		width:30px;
+	}
+	.grid-sizer,
+	.grid-item{ 
+		width: calc((100% - 30px) / 2);
+	}
+	.grid-item{
+		margin-bottom:30px;
+	}
+}
+@media screen and (max-width: 550px){
+	#juicer{
+		padding-bottom:50px;	
+	}
+	.gutter-sizer{
+		width:20px;
+	}
+	.grid-sizer,
+	.grid-item{ 
+		width: 100%;
+	}
+	.grid-item{
+		margin-bottom:20px;
+	}
+}
+.grid-item div{
+	padding:0;
+}
+.grid-item div.bg{
+	height:300px;
+	background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+.grid-item iframe.youtube{
+	height:300px;
+	width:100%;
+}
+@media screen and (max-width: 1023px){
+	.grid-item iframe.youtube,
+	.grid-item div.bg{
+		height:250px;
+	}
+}
+@media screen and (max-width: 750px){
+	.grid-item iframe.youtube,
+	.grid-item div.bg{
+		height:200px;
+	}
+}
+.grid-item span{
+	padding:20px;
+	display:block;
+}
+.grid-item.hidden div.laodingGif{
+	background:none;
+}
+.grid-item.hidden{
+	display:block !important;
+}
+.grid-item.hidden iframe.youtube,
+.grid-item.hidden video,
+.grid-item.hidden div.bg,
+.grid-item.hidden span{
+	opacity:.3;
+}
+.hiddenImg{
+	display:none;
+}
+.hiddenImg{
+	opacity:.3;	
+}
+.grid-item span strong{
+	font-weight:normal;
+	display:none;
+}
+.grid-item span strong.date{
+	display:inline-block;
+}
+.grid-item span p{
+	overflow:hidden;
+}
+.grid-item div.laodingGif{
+	height:300px;
+	background-color:#fff;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-image:url(../img/giphy.gif);
+	background-size:100px 100px;
+}
+@media screen and (max-width: 1023px){
+	.grid-item div.laodingGif{
+		height:300px;
+	}
+}
+@media screen and (max-width: 750px){
+	.grid-item div.laodingGif{
+		height:300px;
+	}
+}
+.grid-item .juicerAdmin{
+	text-align:right;
+	display:block;
+	position:absolute;
+	padding:10px 20px;
+	top:0;
+	left:0;
+	width:calc(100% - 40px);
+	z-index:70;
+	background:#000;
+	color:#fff;	
+}
+.grid-item .juicerAdmin a{
+	display:inline-block;
+	padding:0 0 0 10px;
+	color:#fff;
+}
+.grid-item .juicerAdmin a span{
+	width:16px;
+	height:16px;
+	border-radius:16px;
+	padding:0;
+	margin:0 10px 0 0;
+	display:inline-block;
+	opacity:1;
+}
+.grid-item .juicerAdmin a span.green{
+	background:#0ada0a;
+	border:1px solid #14c514;
+}	
+.grid-item .juicerAdmin a span.red{
+	background:#f71d1d;
+	border:1px solid #c51414;
+}	
+.grid-item .juicerAdmin a span.color1{
+	background:#fff;
+	border:1px solid #fff;
+}	
+.grid-item .juicerAdmin a span.color2{
+	background:#003c7a;
+	border:1px solid #003c7a;
+}	
+.grid-item .juicerAdmin a span.color3{
+	background:#c00b25;
+	border:1px solid #c00b25;
+}
+
+#juicer .social{
+	width:100%;
+	text-align:center;
+	margin-top:20px;
+}
+
+#juicer .social .btn{
+	padding: 12px 20px;
+    margin: 0 20px 0 0;
+    text-transform: uppercase;
+    color: #fff;
+    background: #004388;
+    text-align: center;
+    font-weight: bold;
+    background: linear-gradient(315deg,transparent 10px,#004388 0) bottom right;
+}
+
+#juicer .social .btn:hover{
+	background: linear-gradient(315deg,transparent 10px,#0c5fb5 0) bottom right;
+} 

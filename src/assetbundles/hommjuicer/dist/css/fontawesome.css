@@ -1,0 +1,27 @@
+.fa-minus-square:before{
+	content: '-';
+}
+
+.fa-plus-square:before{
+	content: '+';
+}
+
+.fa-eye-slash:before{
+	content: '-';	
+}
+
+.fa-eye:before{
+	content: '+';	
+}
+
+.fa-instagram:before{
+	content: 'i ';
+}
+
+.fa-facebook:before{
+	content: 'f ';	
+}
+
+.fa-twitter:before{
+	content: 't ';
+}

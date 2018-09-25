@@ -1,0 +1,36 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * hommjuicer plugin for Craft CMS 3.x
+ *
+ * hommjuicer Settings.twig
+ *
+ * @author    Domenik Hofer
+ * @copyright Copyright (c) 2018 Domenik Hofer
+ * @link      homm.ch
+ * @package   Hommjuicer
+ * @since     0.0.1
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("homm\\hommjuicer\\assetbundles\\hommjuicer\\HommjuicerAsset") %}
+
+{{ forms.textField({
+    label: 'Juicer URL',
+    instructions: 'Bsp: api/feeds/campingjungfrau',
+    id: 'juicerURL',
+    name: 'juicerURL',
+    value: settings['juicerURL']})
+}}
+
+{{ forms.textField({
+    label: 'Juicer Länge',
+    instructions: 'Anzahl gezeigter Einträge',
+    id: 'juicerLength',
+    name: 'juicerLength',
+    value: settings['juicerLength']})
+}}
+
+

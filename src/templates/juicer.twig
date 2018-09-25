@@ -1,0 +1,76 @@
+{% do view.registerAssetBundle("homm\\hommjuicer\\assetbundles\\hommjuicer\\HommjuicerAsset") %}
+
+<div id="juicer">
+	<div class="grid">
+		<div class="grid-sizer"></div>
+		<div class="gutter-sizer"></div>
+		
+		{% if entries|length == 0 %}
+		Keine Einträge vorhanden.<br><br>
+		Mögliche Ursache:<br>
+		- Juicer-URL in Einstellungen nicht gesetzt<br>
+		- Update nicht ausgeführt (<a href="/actions/hommjuicer/default/update-juicer">/actions/hommjuicer/default/update-juicer</a>)
+{% endif %}
+		
+		{% for entry in entries %}
+		{% set full_url = entry.full_url %}
+		
+		<div class="grid-item{% if entry.hidden == 1 %} hidden{% endif %}{% if entry.color %} {{entry.color}}{% endif %}" data-aos="fade">
+			{% if currentUser %}
+			<div class="juicerAdmin">
+				<a href="/web/actions/hommjuicer/default?external_id={{ entry.external_id }}&action=color1"><span class="color1"></span></a>	
+				<a href="/web/actions/hommjuicer/default?external_id={{ entry.external_id }}&action=color2"><span class="color2"></span></a>	
+				<a href="/web/actions/hommjuicer/default?external_id={{ entry.external_id }}&action=color3"><span class="color3"></span></a>	
+				
+				<a href="/web/actions/hommjuicer/default?external_id={{ entry.external_id }}&action={% if entry.showimg == 0 %}killimg{% else %}showimg{% endif %}"><span class="fal {% if entry.showimg == 0 %}fa-minus-square{% else %}fa-plus-square{% endif %}"></span></a>
+				
+				<a href="/web/actions/hommjuicer/default?external_id={{ entry.external_id }}&action={% if entry.hidden == 0 %}kill{% else %}show{% endif %}"><span class="fal {% if entry.hidden == 0 %}fa-eye-slash{% else %}fa-eye{% endif %}"></span></a>
+				
+				
+			</div>
+			{% endif %}
+			{% if entry.showimg == 1 %}
+			<div class="hiddenImg">
+				{% endif %}
+				
+				{% if entry.video != '' %}
+				{% set full_url = entry.video %}
+				<video width="100%" style="width:100%" controls poster="{{ entry.image }}"><source src="{{ entry.video }}" type="video/mp4"></video>
+				{% else %}
+				
+				{#
+				
+				if(strpos($external_url, "youtube.com") || strpos($external_url, "youtu.be")){
+					preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#", $external_url, $matches);
+					$extUrl = $matches[0];
+					$image = '<iframe class="youtube" src="https://www.youtube-nocookie.com/embed/'.$matches[0].'" frameborder="0" allowfullscreen></iframe>';
+				} 
+				
+				
+				#}
+				
+				<a href="{{ entry.full_url }}" target="_blank">
+					<div class="laodingGif">
+						<div class="bg" data-original="{{ entry.image }}">
+						</div>
+					</div>
+				</a>
+				{% endif %}
+				{% if entry.showimg == 1 %}
+			</div>
+			{% endif %}					
+			<span>					
+				<a href="{{ full_url }}" target="_blank"><strong class="date"><i class="fab {% if entry.source == 'Facebook' %}fa-facebook{% elseif entry.source == 'Instagram' %}fa-instagram{% endif %}" aria-hidden="true"></i> {{ entry.external_date | date }}</strong></a>
+				<a href="{{ full_url }}" target="_blank" title="Like"><strong><i class="fal fa-heart" aria-hidden="true"></i> {{ entry.like_count }}</strong></a>
+				<div class="clear"></div>							
+				{{ entry.message | raw }}
+			</span>
+		</div>		
+		{% endfor %}
+	</div>
+</div>
+
+
+
+
+

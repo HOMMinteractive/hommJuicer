@@ -1,0 +1,43 @@
+{
+    "name": "homm/hommjuicer",
+    "description": "Homm Juicer",
+    "type": "craft-plugin",
+    "version": "0.0.1",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "hommjuicer"
+    ],
+    "support": {
+        "docs": "???",
+        "issues": "???"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Domenik Hofer",
+            "homepage": "homm.ch"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "homm\\hommjuicer\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "hommjuicer",
+        "handle": "hommjuicer",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "???",
+        "components": {
+            "hommjuicerService": "homm\\hommjuicer\\services\\HommjuicerService"
+        },
+        "class": "homm\\hommjuicer\\Hommjuicer"
+    }
+}
