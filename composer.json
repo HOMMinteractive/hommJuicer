@@ -11,14 +11,14 @@
         "hommjuicer"
     ],
     "support": {
-        "docs": "???",
-        "issues": "???"
+        "docs": "http://homm.ch",
+        "issues": "http://homm.ch"
     },
     "license": "MIT",
     "authors": [
         {
             "name": "Domenik Hofer",
-            "homepage": "homm.ch"
+            "homepage": "http://homm.ch"
         }
     ],
     "require": {
@@ -34,7 +34,7 @@
         "handle": "hommjuicer",
         "hasCpSettings": true,
         "hasCpSection": false,
-        "changelogUrl": "???",
+        "changelogUrl": "",
         "components": {
             "hommjuicerService": "homm\\hommjuicer\\services\\HommjuicerService"
         },
