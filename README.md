@@ -2,8 +2,6 @@
 
 Homm Juicer
 
-![Screenshot](resources/img/plugin-logo.png)
-
 ## Requirements
 
 This plugin requires Craft CMS 3.0.0-beta.23 or later.
@@ -36,8 +34,7 @@ To install the plugin, follow these instructions.
 
 ## hommjuicer Roadmap
 
-Some things to do, and ideas for potential features:
-
-* Release it
+- Youtube not working yet
+- Fontawesome not implemented yet
 
 Brought to you by [Domenik Hofer](homm.ch)
