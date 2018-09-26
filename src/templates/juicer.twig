@@ -18,13 +18,13 @@
 		<div class="grid-item{% if entry.hidden == 1 %} hidden{% endif %}{% if entry.color %} {{entry.color}}{% endif %}" data-aos="fade">
 			{% if currentUser %}
 			<div class="juicerAdmin">
-				<a href="/web/actions/hommjuicer/default?external_id={{ entry.external_id }}&action=color1"><span class="color1"></span></a>	
-				<a href="/web/actions/hommjuicer/default?external_id={{ entry.external_id }}&action=color2"><span class="color2"></span></a>	
-				<a href="/web/actions/hommjuicer/default?external_id={{ entry.external_id }}&action=color3"><span class="color3"></span></a>	
+				<a href="/actions/hommjuicer/default?external_id={{ entry.external_id }}&action=color1"><span class="color1"></span></a>	
+				<a href="/actions/hommjuicer/default?external_id={{ entry.external_id }}&action=color2"><span class="color2"></span></a>	
+				<a href="/actions/hommjuicer/default?external_id={{ entry.external_id }}&action=color3"><span class="color3"></span></a>	
 				
-				<a href="/web/actions/hommjuicer/default?external_id={{ entry.external_id }}&action={% if entry.showimg == 0 %}killimg{% else %}showimg{% endif %}"><span class="fal {% if entry.showimg == 0 %}fa-minus-square{% else %}fa-plus-square{% endif %}"></span></a>
+				<a href="/actions/hommjuicer/default?external_id={{ entry.external_id }}&action={% if entry.showimg == 0 %}killimg{% else %}showimg{% endif %}"><span class="fal {% if entry.showimg == 0 %}fa-minus-square{% else %}fa-plus-square{% endif %}"></span></a>
 				
-				<a href="/web/actions/hommjuicer/default?external_id={{ entry.external_id }}&action={% if entry.hidden == 0 %}kill{% else %}show{% endif %}"><span class="fal {% if entry.hidden == 0 %}fa-eye-slash{% else %}fa-eye{% endif %}"></span></a>
+				<a href="/actions/hommjuicer/default?external_id={{ entry.external_id }}&action={% if entry.hidden == 0 %}kill{% else %}show{% endif %}"><span class="fal {% if entry.hidden == 0 %}fa-eye-slash{% else %}fa-eye{% endif %}"></span></a>
 				
 				
 			</div>
