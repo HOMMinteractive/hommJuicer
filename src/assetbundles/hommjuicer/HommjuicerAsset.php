@@ -46,9 +46,9 @@ class HommjuicerAsset extends AssetBundle
         $this->sourcePath = "@homm/hommjuicer/assetbundles/hommjuicer/dist";
 
         // define the dependencies
-        $this->depends = [
+       /* $this->depends = [
             CpAsset::class,
-        ];
+        ];*/
 
         // define the relative path to CSS/JS files that should be registered with the page
         // when this asset bundle is registered

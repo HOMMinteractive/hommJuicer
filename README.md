@@ -38,3 +38,5 @@ To install the plugin, follow these instructions.
 - Fontawesome not implemented yet
 
 Brought to you by [Domenik Hofer](homm.ch)
+
+---
