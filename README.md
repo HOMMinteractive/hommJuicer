@@ -1,5 +1,13 @@
 # hommjuicer plugin for Craft CMS 3.x
 
+## Juicer Länge
+
+```
+craft.hommjuicer.juicer(20) => 20 Einträge
+craft.hommjuicer.juicer(5)  =>  5 Einträge
+craft.hommjuicer.juicer()   => 15 Einträge (Default)
+```
+
 ## Beispiel Implementation
 
 ```
