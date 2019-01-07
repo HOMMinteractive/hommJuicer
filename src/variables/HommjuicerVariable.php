@@ -46,10 +46,10 @@
 			* @param null $optional
 			* @return string
 		*/
-		public function juicer($optional = null)
+		public function juicer($length = null)
 		{
 			
-			$entries = \homm\hommjuicer\Hommjuicer::getInstance()->services->getEntries();
+			$entries = \homm\hommjuicer\Hommjuicer::getInstance()->services->getEntries($length);
 			
 			
 			return $entries;

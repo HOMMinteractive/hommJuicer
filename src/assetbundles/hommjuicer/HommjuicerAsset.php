@@ -52,15 +52,15 @@ class HommjuicerAsset extends AssetBundle
 
         // define the relative path to CSS/JS files that should be registered with the page
         // when this asset bundle is registered
-        $this->js = [
+       /* $this->js = [
             'js/Hommjuicer.js',
 			'js/lib.js',
         ];
 
         $this->css = [
             'css/Hommjuicer.css',
-			'css/fontawesome.css',
-        ];
+			'css/fontawesome.css', 
+        ];*/
 
         parent::init();
     }

@@ -59,17 +59,31 @@
 			
 		}
 		
-		public function getData()
+		public function getData($length = null)
 		{
-			$juicerLength = \homm\hommjuicer\Hommjuicer::getInstance()->getSettings()->juicerLength;
+			//$juicerLength = \homm\hommjuicer\Hommjuicer::getInstance()->getSettings()->juicerLength;
 			
+			if(!$length){
+				$length = 15;
+				}
+				
+			$numHidden = (new Query()) 
+			->select(['*']) 
+			->from(['{{%hommjuicer_juicer}}'])
+			->where(['hidden' => 1])
+			->limit($length)
+			->all();	
+			
+			$length += sizeof($numHidden);
 			
 			$results = (new Query()) 
 			->select(['*']) 
 			->from(['{{%hommjuicer_juicer}}'])
-			->limit($juicerLength)
+			->limit($length)
 			->all();
 			
+			
+
 			return $results;
 			
 		}
@@ -120,11 +134,14 @@
 		}	
 		
 		
-		public function getEntries()
+		public function getEntries($length = null)
 		{
 			
-			$data = $this->getData();
-			return $this->renderTemplate($data);
+			$data = $this->getData($length);
+			
+			return $data;  
+			
+			//return $this->renderTemplate($data);
 			
 			
 		}
