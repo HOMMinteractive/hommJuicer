@@ -71,6 +71,7 @@
 			->select(['*']) 
 			->from(['{{%hommjuicer_juicer}}'])
 			->where(['hidden' => 1])
+			->orderBy('external_date desc')
 			->limit($length)
 			->all();	
 			
@@ -79,6 +80,7 @@
 			$results = (new Query()) 
 			->select(['*']) 
 			->from(['{{%hommjuicer_juicer}}'])
+			->orderBy('external_date desc')
 			->limit($length)
 			->all();
 			
