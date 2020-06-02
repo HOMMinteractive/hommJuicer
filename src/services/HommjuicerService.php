@@ -73,7 +73,6 @@
 			->where(['hidden' => 1])
 			->orderBy('external_date desc')
 			->limit($length)
-			->orderby('external_date desc')
 			->all();	
 			
 			$length += sizeof($numHidden);
@@ -83,7 +82,6 @@
 			->from(['{{%hommjuicer_juicer}}'])
 			->orderBy('external_date desc')
 			->limit($length)
-			->orderby('external_date desc')
 			->all();
 			
 			
