@@ -1,3 +1,9 @@
+# This package has moved
+
+This package was rewritten and moved to [https://github.com/HOMMinteractive/hommsocialfeed](https://github.com/HOMMinteractive/hommsocialfeed)
+
+----
+
 # hommjuicer plugin for Craft CMS 3.x
 
 ## Juicer Länge
